@@ -31,3 +31,15 @@ helm upgrade -i jupyterhub jupyterhub/jupyterhub \
   --values config.yaml
 ```
 
+get list of deployments
+```bash
+helm ls
+```
+
+uninstall jupyterhub
+```bash
+helm un jupyterhub
+```
+
+
+
