@@ -41,5 +41,11 @@ uninstall jupyterhub
 helm un jupyterhub
 ```
 
+update current namespace
+```bash
+kubectl config set-context --current --namespace jupyterhub
+```
+
+
 
 
