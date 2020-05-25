@@ -14,3 +14,14 @@ proxy:
 EOF
 ```
 
+search for jupyterhub repo
+```bash
+helm search repo jupyterhub/jupyterhub
+```
+
+install jupyterhub
+```bash
+helm upgrade -i jupyterhub jupyterhub/jupyterhub \
+  --values config.yaml
+```
+
