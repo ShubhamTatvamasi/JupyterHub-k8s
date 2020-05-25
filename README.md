@@ -19,9 +19,15 @@ search for jupyterhub repo
 helm search repo jupyterhub/jupyterhub
 ```
 
+create jupyterhub namespace 
+```bash
+kubectl create ns jupyterhub
+```
+
 install jupyterhub
 ```bash
 helm upgrade -i jupyterhub jupyterhub/jupyterhub \
+  --namespace jupyterhub \
   --values config.yaml
 ```
 
