@@ -46,6 +46,23 @@ update current namespace
 kubectl config set-context --current --namespace jupyterhub
 ```
 
+create a Persistent Volume
+```yaml
+kubectl apply -f - << EOF
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: hub-db-dir
+spec:
+  storageClassName: manual
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  hostPath:
+    path: "/usr/local/volumes/jupyterhub"
+EOF
+```
 
 
 
