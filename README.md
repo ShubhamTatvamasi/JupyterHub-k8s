@@ -7,11 +7,13 @@ kubectl create ns jupyterhub
 
 Install jupyterhub:
 ```bash
-helm install jupyterhub jupyterhub/jupyterhub \
+helm upgrade -i jupyterhub jupyterhub/jupyterhub \
   -n jupyterhub \
   --set proxy.secretToken=password \
   --set proxy.service.type=ClusterIP \
-  --set hub.db.pvc.storageClassName=manual
+  --set proxy.chp.resources=null \
+  --set hub.resources=null \
+  --set singleuser.memory.guarantee=null
 ```
 
 Uninstall jupyterhub:
