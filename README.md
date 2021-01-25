@@ -51,6 +51,7 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: jupyterhub
+  namespace: jupyterhub
   annotations:
     nginx.org/websocket-services: proxy-public
 spec:
