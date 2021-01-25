@@ -33,6 +33,7 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: hub-db-dir
+  namespace: jupyterhub
 spec:
   storageClassName: manual
   accessModes:
